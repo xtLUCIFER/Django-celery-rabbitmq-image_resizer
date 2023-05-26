@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="bg-black">
+    <div class="text-white flex flex-col justify-center items-center h-screen">
+
+        <h1 class="font-semibold text-3xl">Image Resizer (Celery and RabbitMq)</h1>
+        <form method="post" action="{% url 'upload_image' %}" class="text-white" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="image" accept="image/*" />
+            <button type="submit" class="bg-purple-600 p-2 m-4 rounded-lg">Upload</button>
+          </form>
+    </div>
+    
+</body>
+</html>
